@@ -20,6 +20,7 @@ console.log(name6)  // gives error 'Assignment to constant variable'*/
 function driversLicence5(passedTest){
     
     if(passedTest){
+        console.log(firstName)   // outputs undefined because of hoisting
         var firstName = 'John';
         var yearOfBirth = 1990;
     }
@@ -34,6 +35,7 @@ driversLicence5(true);
 function driversLicence6(passedTest){
     
     if(passedTest){
+        console.log(firstName)  // throws error
         let firstName = 'John';
         const yearOfBirth = 1990;
     }
@@ -41,4 +43,8 @@ function driversLicence6(passedTest){
 }
 
 driversLicence6(true);
+
+//ES5
+
+
 
